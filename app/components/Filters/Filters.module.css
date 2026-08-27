@@ -1,0 +1,184 @@
+.sidebar {
+  width: 360px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  background: #f7f7f7;
+  padding: 32px;
+  border-radius: 20px;
+}
+
+.group {
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: #475467;
+  margin-bottom: 8px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.locationIcon {
+  position: absolute;
+  left: 14px;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+}
+
+.inputLocation {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px 12px 38px;
+
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  font-size: 14px;
+  color: #101828;
+  outline: none;
+}
+
+.inputLocation:focus {
+  border-color: #87a195;
+}
+
+.title {
+  margin: 0 0 16px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.subTitle {
+  display: block;
+  font-size: 14px;
+  color: #475467;
+  margin-bottom: 12px;
+}
+
+.radioList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioCustom {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+
+  border: 1.5px solid #475467;
+  border-radius: 50%;
+
+  display: inline-block;
+  position: relative;
+
+  transition: border-color 0.2s;
+}
+
+.radioInput:checked + .radioCustom {
+  border-color: #101828;
+}
+
+.radioInput:checked + .radioCustom::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #101828;
+  border-radius: 50%;
+}
+
+.radioText {
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btnSearch {
+  width: 100%;
+  padding: 14px 0;
+
+  background-color: #87a195;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 200px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnSearch:hover {
+  background-color: #728b7f;
+}
+
+.btnClear {
+  width: 100%;
+  padding: 14px 0;
+
+  background-color: #ffffff;
+  color: #101828;
+
+  border: 1px solid #e4e7ec;
+  border-radius: 200px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  transition: border-color 0.2s;
+}
+
+.btnClear:hover {
+  border-color: #87a195;
+}
