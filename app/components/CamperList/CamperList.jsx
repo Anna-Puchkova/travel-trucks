@@ -47,9 +47,10 @@ export default function CamperList() {
       if (lastPage.page < lastPage.totalPages) {
         return lastPage.page + 1;
       }
+
       return undefined;
     },
-    retry: false, // 👈 ВИМКНЕ повторні запити при 404
+    retry: false,
   });
 
   const handleClearFilters = () => {
@@ -62,7 +63,6 @@ export default function CamperList() {
 
   const campers = data?.pages.flatMap((page) => page.campers) ?? [];
 
-  // Якщо є помилка бекенду (404) або списку немає — показуємо EmptyState
   if (isError || campers.length === 0) {
     return (
       <EmptyState

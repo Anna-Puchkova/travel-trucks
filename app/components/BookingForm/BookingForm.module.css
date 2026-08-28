@@ -1,0 +1,124 @@
+.bookingCard {
+  background-color: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 20px;
+  padding: 44px 57px;
+  width: 641px;
+  height: 382px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #475467;
+  margin: 0 0 24px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.fieldContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.fieldContainer:focus-within {
+  border-color: #87a195;
+}
+
+/* Стилі для поля з помилкою */
+.fieldError {
+  background-color: #ffe6e6 !important;
+  border: 1px solid #e44848 !important;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 0 44px 0 18px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #101828;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Лейбл зверху рамочки при помилці */
+.floatingLabel {
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  background-color: #ffe6e6;
+  padding: 0 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #e44848;
+}
+
+.errorIcon {
+  position: absolute;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.errorText {
+  font-size: 14px;
+  color: #e44848;
+  margin: 0 0 0 4px;
+}
+
+.btnSubmit {
+  border-radius: 200px;
+  padding: 16px;
+  width: 100%;
+  height: 56px;
+  background-color: #87a195;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.btnSubmit:hover:not(:disabled) {
+  background-color: #728b7f;
+}
+
+.btnSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

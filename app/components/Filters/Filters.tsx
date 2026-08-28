@@ -4,7 +4,7 @@ import { useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import styles from "./Filters.module.css";
 
-export default function filters() {
+export default function Filters() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();

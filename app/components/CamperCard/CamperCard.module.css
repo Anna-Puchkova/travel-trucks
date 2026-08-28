@@ -1,0 +1,117 @@
+.card {
+  display: flex;
+  width: 100%;
+  max-width: 638px;
+  min-height: 505px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #ffffff;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 136px;
+  height: 144px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 3px solid #829b91;
+  border-radius: 16px;
+}
+
+.image {
+  object-fit: cover;
+}
+.favoriteButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+}
+
+.price {
+  white-space: nowrap;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.rating,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  fill: currentColor;
+}
+
+.description {
+  width: 100%;
+  max-width: 650px;
+  margin: 16px 0;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.amenity {
+  padding: 8px 12px;
+  border-radius: 100px;
+  background: #f2f4f3;
+}
+
+.showMore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  margin-top: 24px;
+  padding: 12px 24px;
+
+  border-radius: 100px;
+  text-decoration: none;
+}

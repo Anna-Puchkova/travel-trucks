@@ -1,0 +1,203 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 64px;
+}
+
+/* Верхній блок (Галерея + Опис/Деталі) */
+.topSection {
+  display: grid;
+  grid-template-columns: 638px 650px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Нижній блок (Відгуки + Форма) */
+.bottomSection {
+  display: grid;
+  grid-template-columns: 638px 650px;
+  gap: 40px;
+  align-items: start;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  width: 638px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 650px;
+}
+
+.reviewsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 88px;
+  width: 623px;
+  height: 180px;
+}
+
+/* Відступ форми для створення 144px від Vehicle details */
+.formWrapper {
+  margin-top: 135px;
+}
+
+.infoCard,
+.detailsCard {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #101828;
+  margin: 16px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+  color: #101828;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin: 0;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #101828;
+
+  margin-bottom: 16px;
+}
+
+.specsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #e4e7ec;
+  padding-top: 8px;
+  margin: 0;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.specRow dt,
+.specRow dd {
+  color: #101828;
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reviewCard {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  height: 180px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e4e7ec;
+  color: #e44848;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.reviewerName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+  margin: 24px 0 4px 0;
+}
+
+.reviewComment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin: 0;
+}
+
+.locationIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+.categoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.categoryBadge {
+  font-size: 16px;
+  font-weight: 500;
+  color: #101828;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: capitalize;
+  background: #f2f4f7;
+  mix-blend-mode: multiply;
+  border-radius: 100px;
+  padding: 12px 18px;
+  width: 115px;
+  height: 48px;
+}

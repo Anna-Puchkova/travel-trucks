@@ -3,7 +3,6 @@ export type CamperForm =
   | "panel_van"
   | "integrated"
   | "semi_integrated";
-
 export type CamperTransmissions = "automatic" | "manual";
 export type CamperEngines = "diesel" | "petrol" | "hybrid" | "electric";
 export type CamperAmenities =
@@ -16,13 +15,29 @@ export type CamperAmenities =
   | "microwave"
   | "gas"
   | "water";
-
+export interface CamperGallery {
+  id: string;
+  camperId: string;
+  thumb: string;
+  original: string;
+  order: number;
+}
+export interface Review {
+  id: string;
+  camperId: string;
+  reviewer_name: string;
+  reviewer_rating: number;
+  comment: string;
+  createdAt: string;
+}
 export interface Camper {
   id: string;
   name: string;
   price: number;
   rating: number;
+  totalReviews: number;
   location: string;
+  description: string;
   form: CamperForm;
   length: string;
   width: string;
@@ -32,10 +47,10 @@ export interface Camper {
   transmission: CamperTransmissions;
   engine: CamperEngines;
   amenities: CamperAmenities[];
-  coverImage: string;
-  totalReviews: number;
+  gallery: CamperGallery[];
+  createdAt: string;
+  updatedAt: string;
 }
-
 export interface CampersResponse {
   page: number;
   perPage: number;
@@ -50,4 +65,11 @@ export interface CamperFilters {
   engine?: CamperEngines;
   page?: number;
   perPage?: number;
+}
+export interface BookingRequest {
+  name: string;
+  email: string;
+}
+export interface BookingResponse {
+  message: string;
 }
