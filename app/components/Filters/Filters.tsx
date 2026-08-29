@@ -78,7 +78,7 @@ export default function Filters() {
 
         <h3 className={styles.title}>Filters</h3>
 
-        {/* Camper form */}
+     
         <div className={styles.group}>
           <span className={styles.subTitle}>Camper form</span>
 
@@ -109,7 +109,7 @@ export default function Filters() {
           </div>
         </div>
 
-        {/* Engine */}
+      
         <div className={styles.group}>
           <span className={styles.subTitle}>Engine</span>
 
@@ -137,7 +137,7 @@ export default function Filters() {
           </div>
         </div>
 
-        {/* Transmission */}
+
         <div className={styles.group}>
           <span className={styles.subTitle}>Transmission</span>
 
@@ -163,7 +163,7 @@ export default function Filters() {
           </div>
         </div>
 
-        {/* Buttons */}
+       
         <div className={styles.buttons}>
           <button type="submit" className={styles.btnSearch}>
             Search

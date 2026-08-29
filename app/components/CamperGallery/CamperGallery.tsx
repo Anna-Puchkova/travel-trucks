@@ -28,7 +28,6 @@ export default function CamperGallery({
 
   return (
     <div className={styles.galleryWrapper}>
-      {/* 1. Головний слайдер: loop={true} для нескінченного перегортання */}
       <Swiper
         loop={true}
         spaceBetween={10}
@@ -54,7 +53,6 @@ export default function CamperGallery({
         ))}
       </Swiper>
 
-      {/* 2. Слайдер мініатюр: loop={false} ОБОВ'ЯЗКОВО для підсвічування */}
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={false}
