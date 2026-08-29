@@ -140,42 +140,6 @@ transmission
 
 Детальна сторінка конкретного кемпера.
 
-## 🗂 Project structure
-
-Основна структура проєкту:
-
-```text
-app/
-├── components/
-│   ├── BookingForm/
-│   ├── CamperCard/
-│   ├── CamperGallery/
-│   ├── CamperList/
-│   ├── EmptyState/
-│   ├── Filters/
-│   ├── Header/
-│   ├── Loader/
-│   └── RatingStars/
-│
-├── lib/
-│   └── api.ts
-│
-├── types/
-│   └── camper.ts
-│
-├── catalog/
-│   ├── page.tsx
-│   └── CamperList/
-│
-├── catalog/
-│   └── [camperId]/
-│       ├── page.tsx
-│       └── page.module.css
-│
-├── page.tsx
-└── layout.tsx
-```
-
 ## 🖼 Images
 
 Для відображення фотографій кемперів використовується компонент `Image` із Next.js.
