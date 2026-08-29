@@ -1,19 +1,40 @@
-.list {
+.container {
   width: 100%;
-  max-width: 888px;
+}
+
+.list {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
+  max-width: 888px;
 }
+
 .btnLoadMore {
-  align-self: center;
-  min-width: 140px;
-  height: 44px;
+  display: block;
+  margin: 32px auto 0;
   border: 1px solid #d5d7da;
-  border-radius: 100px;
+  border-radius: 200px;
+  width: 145px;
+  height: 56px;
   background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #101828;
   cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 }
+
+.btnLoadMore:hover,
+.btnLoadMore:focus {
+  border-color: #6d7b75;
+}
+
 .btnLoadMore:disabled {
   cursor: default;
   opacity: 0.6;

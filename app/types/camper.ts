@@ -39,6 +39,7 @@ export interface Camper {
   location: string;
   description: string;
   form: CamperForm;
+  coverImage?: string;
   length: string;
   width: string;
   height: string;

@@ -56,7 +56,6 @@ export default function PageCamperId({
 
   return (
     <div className={styles.container}>
-      {/* ВЕРХНЯ СЕКЦІЯ */}
       <div className={styles.topSection}>
         <div className={styles.leftColumn}>
           <CamperGallery gallery={camper.gallery || []} name={camper.name} />
@@ -86,7 +85,6 @@ export default function PageCamperId({
           <div className={styles.detailsCard}>
             <h3 className={styles.cardTitle}>Vehicle details</h3>
 
-            {/* БЕЙДЖІ ЗРУЧНОСТЕЙ */}
             <ul className={styles.categoriesList}>
               {camper.transmission && (
                 <li className={styles.categoryBadge}>{camper.transmission}</li>
@@ -104,38 +102,35 @@ export default function PageCamperId({
               )}
             </ul>
 
-            {/* ТЕХНІЧНІ ХАРАКТЕРИСТИКИ */}
-            <dl className={styles.specsList}>
-              <div className={styles.specRow}>
-                <dt>Form</dt> <dd>{camper.form || "-"}</dd>
-              </div>
-              <div className={styles.specRow}>
-                <dt>Length</dt> <dd>{camper.length || "-"}</dd>
-              </div>
-              <div className={styles.specRow}>
-                <dt>Width</dt> <dd>{camper.width || "-"}</dd>
-              </div>
-              <div className={styles.specRow}>
-                <dt>Height</dt> <dd>{camper.height || "-"}</dd>
-              </div>
-              <div className={styles.specRow}>
-                <dt>Tank</dt> <dd>{camper.tank || "-"}</dd>
-              </div>
-              <div className={styles.specRow}>
-                <dt>Consumption</dt> <dd>{camper.consumption || "-"}</dd>
-              </div>
-              <div className={styles.specRow}>
-                <dt>Transmission</dt> <dd>{camper.transmission || "-"}</dd>
-              </div>
-              <div className={styles.specRow}>
-                <dt>Engine</dt> <dd>{camper.engine || "-"}</dd>
-              </div>
-            </dl>
+            <dl className={styles.specsList}></dl>
+            <div className={styles.specRow}>
+              <dt>Form</dt> <dd>{camper.form || "-"}</dd>
+            </div>
+            <div className={styles.specRow}>
+              <dt>Length</dt> <dd>{camper.length || "-"}</dd>
+            </div>
+            <div className={styles.specRow}>
+              <dt>Width</dt> <dd>{camper.width || "-"}</dd>
+            </div>
+            <div className={styles.specRow}>
+              <dt>Height</dt> <dd>{camper.height || "-"}</dd>
+            </div>
+            <div className={styles.specRow}>
+              <dt>Tank</dt> <dd>{camper.tank || "-"}</dd>
+            </div>
+            <div className={styles.specRow}>
+              <dt>Consumption</dt> <dd>{camper.consumption || "-"}</dd>
+            </div>
+            <div className={styles.specRow}>
+              <dt>Transmission</dt> <dd>{camper.transmission || "-"}</dd>
+            </div>
+            <div className={styles.specRow}>
+              <dt>Engine</dt> <dd>{camper.engine || "-"}</dd>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* НИЖНЯ СЕКЦІЯ */}
       <div className={styles.bottomSection}>
         <div className={styles.leftColumn}>
           <section className={styles.reviewsSection}>

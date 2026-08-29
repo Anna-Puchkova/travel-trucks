@@ -3,16 +3,17 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useSearchParams, useRouter } from "next/navigation";
 
-import {
+import type {
   CamperEngines,
   CamperForm,
   CamperTransmissions,
 } from "../../types/camper";
-import { fetchCampers } from "../../lib/api";
 
+import { fetchCampers } from "../../lib/api";
 import CamperCard from "../../components/CamperCard/CamperCard";
 import Loader from "../../components/Loader/Loader";
 import EmptyState from "../../components/EmptyState/EmptyState";
+
 import styles from "./CamperList.module.css";
 
 export default function CamperList() {
@@ -36,20 +37,19 @@ export default function CamperList() {
     isError,
   } = useInfiniteQuery({
     queryKey: ["campers", filters],
+
     queryFn: ({ pageParam }) =>
       fetchCampers({
         ...filters,
         page: pageParam,
         perPage: 4,
       }),
-    initialPageParam: 1,
-    getNextPageParam: (lastPage) => {
-      if (lastPage.page < lastPage.totalPages) {
-        return lastPage.page + 1;
-      }
 
-      return undefined;
-    },
+    initialPageParam: 1,
+
+    getNextPageParam: (lastPage) =>
+      lastPage.page < lastPage.totalPages ? lastPage.page + 1 : undefined,
+
     retry: false,
   });
 
@@ -61,9 +61,18 @@ export default function CamperList() {
     return <Loader />;
   }
 
+  if (isError) {
+    return (
+      <EmptyState
+        onClearFilters={handleClearFilters}
+        onViewAll={handleClearFilters}
+      />
+    );
+  }
+
   const campers = data?.pages.flatMap((page) => page.campers) ?? [];
 
-  if (isError || campers.length === 0) {
+  if (campers.length === 0) {
     return (
       <EmptyState
         onClearFilters={handleClearFilters}

@@ -1,14 +1,18 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Navigation, Thumbs } from "swiper/modules";
+
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+
 import styles from "./CamperGallery.module.css";
+
 type GalleryImage = { id: string; thumb: string; original: string };
+
 export default function CamperGallery({
   gallery,
   name,
@@ -17,21 +21,23 @@ export default function CamperGallery({
   name: string;
 }) {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+
   if (!gallery || gallery.length === 0) {
     return null;
   }
+
   return (
     <div className={styles.galleryWrapper}>
+      {/* 1. Головний слайдер: loop={true} для нескінченного перегортання */}
       <Swiper
         loop={true}
         spaceBetween={10}
         navigation={true}
-        thumbs={
-          thumbsSwiper && !thumbsSwiper.destroyed
-            ? { swiper: thumbsSwiper }
-            : undefined
-        }
-        modules={[FreeMode, Navigation, Thumbs]}
+        thumbs={{
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+          slideThumbActiveClass: styles.thumbSlideActive,
+        }}
+        modules={[Navigation, Thumbs]}
         className={styles.mainSwiper}
       >
         {gallery.map((image, index) => (
@@ -48,14 +54,14 @@ export default function CamperGallery({
         ))}
       </Swiper>
 
+      {/* 2. Слайдер мініатюр: loop={false} ОБОВ'ЯЗКОВО для підсвічування */}
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={false}
         spaceBetween={32}
         slidesPerView="auto"
-        freeMode={true}
         watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[Navigation, Thumbs]}
         className={styles.thumbsSwiper}
       >
         {gallery.map((image, index) => (

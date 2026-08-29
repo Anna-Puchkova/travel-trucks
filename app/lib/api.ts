@@ -14,6 +14,9 @@ export async function fetchCampers(
   const { data } = await axios.get<CampersResponse>(`${API_URL}/campers`, {
     params: filters,
   });
+
+  console.log("API CAMPERS:", data);
+
   return data;
 }
 export async function fetchCamperById(id: string): Promise<Camper> {
