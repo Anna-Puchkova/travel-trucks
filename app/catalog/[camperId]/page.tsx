@@ -89,17 +89,16 @@ export default function PageCamperId({
               {camper.transmission && (
                 <li className={styles.categoryBadge}>{camper.transmission}</li>
               )}
+
               {camper.engine && (
                 <li className={styles.categoryBadge}>{camper.engine}</li>
               )}
-              {camper.AC && <li className={styles.categoryBadge}>AC</li>}
-              {camper.kitchen && (
-                <li className={styles.categoryBadge}>Kitchen</li>
-              )}
-              {camper.radio && <li className={styles.categoryBadge}>Radio</li>}
-              {camper.bathroom && (
-                <li className={styles.categoryBadge}>Bathroom</li>
-              )}
+
+              {camper.amenities?.map((amenity) => (
+                <li key={amenity} className={styles.categoryBadge}>
+                  {amenity}
+                </li>
+              ))}
             </ul>
 
             <dl className={styles.specsList}></dl>

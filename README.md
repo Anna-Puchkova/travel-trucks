@@ -204,7 +204,7 @@ Filters.module.css
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Anna-Puchkova/travel-trucks.git
 ```
 
 ### 2. Go to the project directory

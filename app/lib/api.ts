@@ -15,8 +15,6 @@ export async function fetchCampers(
     params: filters,
   });
 
-  console.log("API CAMPERS:", data);
-
   return data;
 }
 export async function fetchCamperById(id: string): Promise<Camper> {
