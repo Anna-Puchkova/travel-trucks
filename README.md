@@ -77,8 +77,6 @@ TravelTrucks — вебзастосунок для пошуку та броню�
 - **CSS Modules**
 - **Swiper**
 - **React Icons**
-- **Formik**
-- **Yup**
 
 Next.js використовується як React-фреймворк із сучасним App Router.
 
