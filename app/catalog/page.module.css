@@ -4,7 +4,6 @@
   background-color: #ffffff;
 }
 
-/* Головний сітковий контейнер: align-items: stretch розтягує обидві колонки */
 .catalogContainer {
   display: flex;
   align-items: stretch;
@@ -16,7 +15,6 @@
   box-sizing: border-box;
 }
 
-/* Права колонка займає весь вільний простір і розтягується по висоті */
 .contentWrapper {
   flex: 1;
   width: 100%;

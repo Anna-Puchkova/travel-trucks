@@ -11,7 +11,7 @@
   height: 505px;
   border-radius: 17px;
   overflow: hidden;
-  margin-bottom: 24px; /* Відступ між великим фото та мініатюрами */
+  margin-bottom: 24px;
 }
 
 .mainSlide {
@@ -27,7 +27,7 @@
 .thumbsSwiper {
   width: 100%;
   height: 144px;
-  padding: 0; /* ПРИБИРАЄМО padding-top, який зсував галерею */
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -47,7 +47,6 @@
     border-color 0.2s ease;
 }
 
-/* Активний стан слайда-мініатюри */
 .thumbSlideActive {
   opacity: 1 !important;
   border-color: #829b91 !important;
